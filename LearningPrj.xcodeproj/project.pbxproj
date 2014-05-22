@@ -14,13 +14,14 @@
 		5C73CDA91925EC8300B1D57E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C73CDA81925EC8300B1D57E /* main.m */; };
 		5C73CDAD1925EC8300B1D57E /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C73CDAC1925EC8300B1D57E /* LPAppDelegate.m */; };
 		5C73CDB01925EC8300B1D57E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C73CDAE1925EC8300B1D57E /* Main.storyboard */; };
-		5C73CDB31925EC8300B1D57E /* LPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C73CDB21925EC8300B1D57E /* LPViewController.m */; };
 		5C73CDB51925EC8300B1D57E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C73CDB41925EC8300B1D57E /* Images.xcassets */; };
 		5C73CDBC1925EC8300B1D57E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C73CDBB1925EC8300B1D57E /* XCTest.framework */; };
 		5C73CDBD1925EC8300B1D57E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C73CD9C1925EC8300B1D57E /* Foundation.framework */; };
 		5C73CDBE1925EC8300B1D57E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C73CDA01925EC8300B1D57E /* UIKit.framework */; };
 		5C73CDC61925EC8300B1D57E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5C73CDC41925EC8300B1D57E /* InfoPlist.strings */; };
 		5C73CDC81925EC8300B1D57E /* LearningPrjTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C73CDC71925EC8300B1D57E /* LearningPrjTests.m */; };
+		5CE1C042192DA633001D113E /* LPLearningContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE1C041192DA633001D113E /* LPLearningContentViewController.m */; };
+		5CE1C045192DA934001D113E /* LPContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE1C044192DA934001D113E /* LPContentManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,16 @@
 		5C73CDAB1925EC8300B1D57E /* LPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAppDelegate.h; sourceTree = "<group>"; };
 		5C73CDAC1925EC8300B1D57E /* LPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPAppDelegate.m; sourceTree = "<group>"; };
 		5C73CDAF1925EC8300B1D57E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5C73CDB11925EC8300B1D57E /* LPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPViewController.h; sourceTree = "<group>"; };
-		5C73CDB21925EC8300B1D57E /* LPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPViewController.m; sourceTree = "<group>"; };
 		5C73CDB41925EC8300B1D57E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C73CDBA1925EC8300B1D57E /* LearningPrjTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningPrjTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C73CDBB1925EC8300B1D57E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5C73CDC31925EC8300B1D57E /* LearningPrjTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LearningPrjTests-Info.plist"; sourceTree = "<group>"; };
 		5C73CDC51925EC8300B1D57E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5C73CDC71925EC8300B1D57E /* LearningPrjTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningPrjTests.m; sourceTree = "<group>"; };
+		5CE1C040192DA633001D113E /* LPLearningContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LPLearningContentViewController.h; path = ../LPLearningContentViewController.h; sourceTree = "<group>"; };
+		5CE1C041192DA633001D113E /* LPLearningContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LPLearningContentViewController.m; path = ../LPLearningContentViewController.m; sourceTree = "<group>"; };
+		5CE1C043192DA934001D113E /* LPContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPContentManager.h; sourceTree = "<group>"; };
+		5CE1C044192DA934001D113E /* LPContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPContentManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,13 @@
 		5C73CDA21925EC8300B1D57E /* LearningPrj */ = {
 			isa = PBXGroup;
 			children = (
+				5CE1C040192DA633001D113E /* LPLearningContentViewController.h */,
+				5CE1C043192DA934001D113E /* LPContentManager.h */,
+				5CE1C044192DA934001D113E /* LPContentManager.m */,
+				5CE1C041192DA633001D113E /* LPLearningContentViewController.m */,
 				5C73CDAB1925EC8300B1D57E /* LPAppDelegate.h */,
 				5C73CDAC1925EC8300B1D57E /* LPAppDelegate.m */,
 				5C73CDAE1925EC8300B1D57E /* Main.storyboard */,
-				5C73CDB11925EC8300B1D57E /* LPViewController.h */,
-				5C73CDB21925EC8300B1D57E /* LPViewController.m */,
 				5C73CDB41925EC8300B1D57E /* Images.xcassets */,
 				5C73CDA31925EC8300B1D57E /* Supporting Files */,
 			);
@@ -251,8 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C73CDAD1925EC8300B1D57E /* LPAppDelegate.m in Sources */,
+				5CE1C042192DA633001D113E /* LPLearningContentViewController.m in Sources */,
 				5C73CDA91925EC8300B1D57E /* main.m in Sources */,
-				5C73CDB31925EC8300B1D57E /* LPViewController.m in Sources */,
+				5CE1C045192DA934001D113E /* LPContentManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +465,7 @@
 				5C73CDCD1925EC8300B1D57E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C73CDCE1925EC8300B1D57E /* Build configuration list for PBXNativeTarget "LearningPrjTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +474,7 @@
 				5C73CDD01925EC8300B1D57E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
