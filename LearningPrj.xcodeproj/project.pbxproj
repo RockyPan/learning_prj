@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0AC1A0192F1C0F0086BADE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AC19E192F1C0F0086BADE /* Model.xcdatamodeld */; };
+		5C0AC1A2192F37EE0086BADE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0AC1A1192F37EE0086BADE /* CoreData.framework */; };
+		5C0AC1A5192F40CF0086BADE /* Grades.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AC1A4192F40CF0086BADE /* Grades.m */; };
 		5C73CD9D1925EC8300B1D57E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C73CD9C1925EC8300B1D57E /* Foundation.framework */; };
 		5C73CD9F1925EC8300B1D57E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C73CD9E1925EC8300B1D57E /* CoreGraphics.framework */; };
 		5C73CDA11925EC8300B1D57E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C73CDA01925EC8300B1D57E /* UIKit.framework */; };
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0AC19F192F1C0F0086BADE /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		5C0AC1A1192F37EE0086BADE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5C0AC1A3192F40CF0086BADE /* Grades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grades.h; sourceTree = "<group>"; };
+		5C0AC1A4192F40CF0086BADE /* Grades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grades.m; sourceTree = "<group>"; };
 		5C73CD991925EC8300B1D57E /* LearningPrj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningPrj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C73CD9C1925EC8300B1D57E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C73CD9E1925EC8300B1D57E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0AC1A2192F37EE0086BADE /* CoreData.framework in Frameworks */,
 				5C73CD9F1925EC8300B1D57E /* CoreGraphics.framework in Frameworks */,
 				5C73CDA11925EC8300B1D57E /* UIKit.framework in Frameworks */,
 				5C73CD9D1925EC8300B1D57E /* Foundation.framework in Frameworks */,
@@ -104,6 +112,7 @@
 		5C73CD9B1925EC8300B1D57E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C0AC1A1192F37EE0086BADE /* CoreData.framework */,
 				5C73CD9C1925EC8300B1D57E /* Foundation.framework */,
 				5C73CD9E1925EC8300B1D57E /* CoreGraphics.framework */,
 				5C73CDA01925EC8300B1D57E /* UIKit.framework */,
@@ -115,6 +124,9 @@
 		5C73CDA21925EC8300B1D57E /* LearningPrj */ = {
 			isa = PBXGroup;
 			children = (
+				5C0AC19E192F1C0F0086BADE /* Model.xcdatamodeld */,
+				5C0AC1A3192F40CF0086BADE /* Grades.h */,
+				5C0AC1A4192F40CF0086BADE /* Grades.m */,
 				5CE1C040192DA633001D113E /* LPLearningContentViewController.h */,
 				5CE1C043192DA934001D113E /* LPContentManager.h */,
 				5CE1C044192DA934001D113E /* LPContentManager.m */,
@@ -257,6 +269,8 @@
 			files = (
 				5C73CDAD1925EC8300B1D57E /* LPAppDelegate.m in Sources */,
 				5CE1C042192DA633001D113E /* LPLearningContentViewController.m in Sources */,
+				5C0AC1A0192F1C0F0086BADE /* Model.xcdatamodeld in Sources */,
+				5C0AC1A5192F40CF0086BADE /* Grades.m in Sources */,
 				5C73CDA91925EC8300B1D57E /* main.m in Sources */,
 				5CE1C045192DA934001D113E /* LPContentManager.m in Sources */,
 			);
@@ -385,6 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LearningPrj/LearningPrj-Prefix.pch";
 				INFOPLIST_FILE = "LearningPrj/LearningPrj-Info.plist";
@@ -398,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LearningPrj/LearningPrj-Prefix.pch";
 				INFOPLIST_FILE = "LearningPrj/LearningPrj-Info.plist";
@@ -477,6 +493,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5C0AC19E192F1C0F0086BADE /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5C0AC19F192F1C0F0086BADE /* Model.xcdatamodel */,
+			);
+			currentVersion = 5C0AC19F192F1C0F0086BADE /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5C73CD911925EC8300B1D57E /* Project object */;
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Grades" representedClassName="Grades" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="lessons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lessons" inverseName="grade" inverseEntity="Lessons" syncable="YES"/>
+    </entity>
+    <entity name="Lessons" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="grade" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Grades" inverseName="lessons" inverseEntity="Grades" syncable="YES"/>
+    </entity>
+    <entity name="Records" syncable="YES">
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Words" syncable="YES"/>
+    </entity>
+    <entity name="Words" syncable="YES">
+        <attribute name="chinese" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="english" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="lesson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lessons" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Words" positionX="-666" positionY="-187" width="128" height="88"/>
+        <element name="Lessons" positionX="-281" positionY="-130" width="128" height="73"/>
+        <element name="Grades" positionX="-47" positionY="-99" width="128" height="73"/>
+        <element name="Records" positionX="-236" positionY="44" width="128" height="58"/>
+    </elements>
+</model>

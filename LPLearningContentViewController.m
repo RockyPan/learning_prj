@@ -10,18 +10,18 @@
 
 @interface LPLearningContentViewController ()
 
-@property (readonly) NSArray * dailyContent;
+@property (readonly, strong, nonatomic) NSArray * dailyContent;
 
 @end
 
 @implementation LPLearningContentViewController
 
-@synthesize dailyContent;
+@synthesize dailyContent = _dailyContent;
 
 - (NSArray *) dailyContent
 {
-    if (nil == dailyContent) dailyContent = [[NSArray alloc] initWithObjects: @"text", @"sample", nil];
-    return dailyContent;
+    if (nil == _dailyContent) _dailyContent = [[NSArray alloc] initWithObjects: @"text", @"sample", nil];
+    return _dailyContent;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style

@@ -7,12 +7,86 @@
 //
 
 #import "LPAppDelegate.h"
+#import "Grades.h"
+
+
 
 @implementation LPAppDelegate
 
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+- (NSManagedObjectContext *) managedObjectContext
+{
+    if (nil == _managedObjectContext) {
+        NSPersistentStoreCoordinator * coordinator = [self persistentStoreCoordinator];
+        if (nil != coordinator) {
+            _managedObjectContext = [[NSManagedObjectContext alloc] init];
+            [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+        }
+    }
+    return _managedObjectContext;
+}
+
+- (NSManagedObjectModel *) managedObjectModel
+{
+    if (nil == _managedObjectModel) {
+        NSURL * modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+        _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    }
+    return _managedObjectModel;
+}
+
+- (NSPersistentStoreCoordinator *) persistentStoreCoordinator
+{
+    if (nil == _persistentStoreCoordinator) {
+        NSURL * storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"data.sqlite"];
+        NSError * error = nil;
+        _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+                                                       configuration:nil
+                                                                 URL:storeURL
+                                                             options:nil
+                                                               error:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+    return _persistentStoreCoordinator;
+}
+
+- (void) saveContext
+{
+    NSError * error = nil;
+    NSManagedObjectContext * managedObjectContext = self.managedObjectContext;
+    if (nil != managedObjectContext) {
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+}
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    /*
+    //PK 测试写入部分数据
+    NSManagedObjectContext * context = [self managedObjectContext];
+    Grades * grade = (Grades *)[NSEntityDescription insertNewObjectForEntityForName:@"Grades"
+                                                             inManagedObjectContext:context];
+    grade.name = @"一年级上册";
+    NSError * error = nil;
+    if (![context save:&error]) {
+        NSLog(@"@不能保存：%@", [error localizedDescription]);
+    }
+    */
+    
     return YES;
 }
 							
@@ -40,7 +114,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [self saveContext];
 }
 
 @end
